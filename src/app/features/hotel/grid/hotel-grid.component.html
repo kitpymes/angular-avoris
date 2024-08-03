@@ -1,0 +1,51 @@
+<div id="HOTEL-GRID">
+
+	<div class="grid-header">
+		@if (model.actions.export?.visible) {
+			<div class="export">
+				<mat-button-toggle-group appearance="legacy">
+					<mat-button-toggle [disabled]="!model.actions.export.CSV.enabled" (click)="model.actions.export.CSV.onExport()">CSV</mat-button-toggle>
+					<mat-button-toggle [disabled]="!model.actions.export.WORD.enabled" (click)="model.actions.export.WORD.onExport()">WORD</mat-button-toggle>
+					<mat-button-toggle [disabled]="!model.actions.export.PDF.enabled" (click)="model.actions.export.PDF.onExport()">PDF</mat-button-toggle>
+				</mat-button-toggle-group>
+			</div>
+		}
+
+		@if (model.actions.search?.visible) {
+			<div class="search">
+				<app-search [(ngModel)]="model.gridSearchValue" (ngModelChange)="model.actions.search.onSearch()"></app-search>
+			</div>
+		}
+
+		@if(model.actions.create?.visible || model.actions.delete?.visible) {
+			<div class="actions">
+				@if(model.actions.create?.visible) {
+					<button [disabled]="!model.actions.create?.enabled " mat-mini-fab aria-label="create" (click)="model.actions.create.onClick()">
+						<mat-icon>add</mat-icon>
+					</button>
+				}
+
+				@if(model.actions.delete?.visible) {
+					<button [disabled]="!model.actions.delete?.enabled" mat-mini-fab aria-label="delete" (click)="model.actions.delete.onClick()">
+						<mat-icon>delete</mat-icon>
+					</button>
+				}
+			</div>
+		}
+
+	</div>
+
+	<div class="grid-body">
+		<ag-grid-angular class="ag-theme-material" [gridOptions]="model.gridOptions" [modules]="model.gridModules"></ag-grid-angular>
+	</div>
+
+	<div class="grid-footer">
+		<p class="refresh-text"><b>{{model.gridLastUpdatedDate}}</b></p>
+		<div class="refresh-button">
+			<button mat-mini-fab aria-label="refresh" (click)="model.actions.onRefresh()" >
+				<mat-icon>refresh</mat-icon>
+			</button>
+		</div>
+	</div>
+
+</div>

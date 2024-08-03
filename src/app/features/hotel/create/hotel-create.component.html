@@ -1,0 +1,75 @@
+<div id="HOTEL-CREATE">
+
+	<div class="app-form-title">Crear hotel</div>
+
+	<form [formGroup]="model.form.group">
+
+		<div class="app-form-row">
+			<div class="app-form-col">
+				<mat-form-field>
+					<mat-label matLabel [attr.for]="'name'">
+						Nombre
+					 </mat-label>
+
+					<input matInput
+						formControlName="name"
+						autocomplete="on"
+						placeholder="Ingrese un nombre"
+						appAutoFocus
+					/>
+					<mat-error>{{ model.form.errors['name'] }}</mat-error>
+				</mat-form-field>
+			</div>
+		</div>
+
+		<div class="app-form-row">
+			<div class="app-form-col">
+				<mat-form-field>
+					<mat-label matLabel [attr.for]="'description'">
+						{{ 'APP.CONFIG.PERMISSION.CREATE.INPUT.DESCRIPTION.LABEL' }}
+					 </mat-label>
+
+					<input matInput
+						formControlName="description"
+						autocomplete="on"
+						placeholder="{{ 'APP.CONFIG.PERMISSION.CREATE.INPUT.DESCRIPTION.PLACEHOLDER' }}"
+					/>
+					<mat-error>{{ model.form.errors['description'] }}</mat-error>
+				</mat-form-field>
+			</div>
+		</div>
+
+		<div class="app-form-row">
+			<div class="app-form-col">
+				<mat-checkbox formControlName="isDefault">
+					{{ 'APP.CONFIG.PERMISSION.CREATE.INPUT.ISDEFAULT.LABEL' }}
+				</mat-checkbox>
+			</div>
+			<div class="app-form-col">
+				<mat-checkbox formControlName="isActive">
+					{{ 'APP.CONFIG.PERMISSION.CREATE.INPUT.ISACTIVE.LABEL' }}
+				</mat-checkbox>
+			</div>
+			<div class="app-form-col">
+				<mat-checkbox formControlName="isDelete">
+					{{ 'APP.CONFIG.PERMISSION.CREATE.INPUT.ISDELETE.LABEL' }}
+				</mat-checkbox>
+			</div>
+		</div>
+
+		<div class="app-form-row">
+			<div class="app-form-col">
+				<button mat-raised-button [mat-dialog-close]="true">
+					{{ 'APP.CONFIG.PERMISSION.CREATE.BUTTON.CLOSE.LABEL' }}
+				</button>
+			</div>
+			<div class="app-form-col">
+				<button mat-raised-button color="primary" [disabled]="!model.form.group.dirty || model.form.group.invalid" (click)="onSubmit()">
+					{{ 'APP.CONFIG.PERMISSION.CREATE.BUTTON.SAVE.LABEL' }}
+				</button>
+			</div>
+		</div>
+
+	</form>
+
+</div>

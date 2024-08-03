@@ -1,0 +1,138 @@
+:root {
+	.message-dialog-backdrop {
+		background-color: rgba(255, 255, 255, .3);
+		backdrop-filter: blur(10px);
+	}
+
+	.message-dialog-error {
+		.message-dialog-title {
+			color: #eeeeee;
+			background-color: #d41123fa;
+
+			.message-dialog-title-icon {
+				float: right;
+				padding-top: 21px;
+			}
+		}
+
+		.message-dialog-content {
+			margin-top: 10px;
+		}
+
+		.message-dialog-actions {
+			.message-dialog-actions-close-button {
+				color: #d41123fa;
+				font-weight: 700;
+			}
+		}
+	}
+
+	.message-dialog-warning {
+		.message-dialog-title {
+			color: #eeeeee;
+			background-color: #e15e0cfa;
+
+			.message-dialog-title-icon {
+				float: right;
+				padding-top: 21px;
+			}
+		}
+
+		.message-dialog-content {
+			margin-top: 10px;
+		}
+
+		.message-dialog-actions {
+			.message-dialog-actions-close-button {
+				color: #e15e0cfa;
+				font-weight: 700;
+			}
+		}
+	}
+
+	.message-dialog-info {
+		.message-dialog-title {
+			color: #eeeeee;
+			background-color: #6a93e2;
+
+			.message-dialog-title-icon {
+				float: right;
+				padding-top: 21px;
+			}
+		}
+
+		.message-dialog-content {
+			margin-top: 10px;
+		}
+
+		.message-dialog-actions {
+			.message-dialog-actions-close-button {
+				color: #6a93e2;
+				font-weight: 700;
+			}
+		}
+	}
+
+	.message-dialog-success {
+		.message-dialog-title {
+			color: #eeeeee;
+			background-color: #6ae2a6;
+
+			.message-dialog-title-icon {
+				float: right;
+				padding-top: 21px;
+			}
+		}
+
+		.message-dialog-content {
+			margin-top: 10px;
+		}
+
+		.message-dialog-actions {
+			.message-dialog-actions-close-button {
+				color: #6ae2a6;
+				font-weight: 700;
+			}
+		}
+	}
+
+
+	.message-snackbar-error {
+		div {
+			color: #eeeeee;
+			background-color: #d41123fa;
+			border-radius: 3px;
+		}
+
+		button {
+			font-weight: bold;
+			color: #eeeeee !important;
+		}
+	}
+
+	.message-snackbar-info {
+		div {
+			color: white;
+			background-color: #6a93e2;
+			border-radius: 3px;
+		}
+
+		button {
+			font-weight: bold;
+			color: white !important;
+		}
+	}
+
+	.message-snackbar-success {
+		div {
+			color: #056b2b;
+			background-color: #6ae2a6;
+			border-radius: 3px;
+		}
+
+		button {
+			font-weight: bold;
+			color: #056b2b !important;
+		}
+	}
+}

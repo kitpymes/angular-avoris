@@ -1,0 +1,14 @@
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-material.css';
+
+ag-grid-angular {
+	width: 100%;
+	height: 550px;
+
+	.ag-header {
+		--ag-header-foreground-color: white;
+		--ag-header-background-color: #7a7979b8;
+		--ag-header-cell-hover-background-color: rgb(146, 144, 149);
+		--ag-header-cell-moving-background-color: rgb(146, 144, 149);
+	}
+}

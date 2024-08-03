@@ -1,0 +1,62 @@
+#HOTEL-GRID {
+	margin-top: 10px;
+
+	.grid-header {
+		background-color: whitesmoke;
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding: 10px;
+
+		.search {
+			flex: 1 1 auto;
+		}
+
+		.actions {
+			margin-left: auto;
+			display: flex;
+			align-items: center;
+
+			button {
+				margin-left: 5px;
+			}
+		}
+	}
+
+	.grid-body {
+		clear: both;
+		display: flex;
+		flex-direction: row;
+		overflow: auto;
+	}
+
+	.grid-footer {
+		align-items: center;
+		display: flex;
+		padding: 0 10px;
+		align-content: center;
+		justify-content: center;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background-color: whitesmoke;
+		font-size: small;
+
+		.refresh-text {
+			b {
+				margin-left: 2px;
+			}
+		}
+
+		.refresh-button {
+			padding-left: 10px;
+
+			button {
+				width: 25px;
+				height: 25px;
+			}
+		}
+	}
+}

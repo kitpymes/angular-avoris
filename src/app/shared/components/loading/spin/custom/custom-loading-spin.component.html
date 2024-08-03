@@ -1,0 +1,13 @@
+<div id="CUSTOM-LOADING-SPIN">
+
+   <mat-spinner
+      [color]="settings.color"
+      [diameter]="settings.diameter"
+      [mode]="settings.mode"
+      [strokeWidth]="settings.strokeWidth"
+      [value]="settings.value">
+   </mat-spinner>
+
+   <h2 *ngIf="settings.value" [style.top]="-((73 * settings.diameter) / 100) + 'px'">{{settings.value}}%</h2>
+
+</div>

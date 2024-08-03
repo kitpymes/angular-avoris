@@ -1,0 +1,11 @@
+#SITE-LAYOUT-FOOTER {
+   .spacer {
+      flex: 1 1 auto;
+    }
+
+    span {
+       &.text {
+         font-size: 17px;
+       }
+    }
+}

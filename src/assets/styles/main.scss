@@ -1,0 +1,85 @@
+@use './icons';
+@use './loading';
+@use './message';
+@use './theme';
+@use './aggrid';
+
+:root {
+  html, body {
+    height: 100%;
+    width: 100%;
+ }
+
+ body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Roboto, sans-serif;
+ }
+
+	.app-form {
+		.app-form-row {
+			flex-direction: row;
+			content: "";
+			clear: both;
+			margin: 10px 0;
+			display: inline-flex;
+			flex-wrap: wrap;
+			align-content: center;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+
+			.app-form-col {
+				display: inline-flex;
+				flex-direction: column;
+				margin: 0 2px;
+				flex: 1 1 auto;
+
+				input,
+				textarea {
+					font-size: 12px;
+					letter-spacing: 1px;
+				}
+
+				mat-form-field {
+					width: 100%;
+				}
+			}
+		}
+
+		.app-form-header {
+			.app-form-title {
+				padding: 18px;
+				margin: 0;
+				background: #3f51b5;
+				color: white;
+				font-size: 19px;
+			}
+		}
+
+		.app-form-body {
+			max-height: 85vh;
+			overflow: auto;
+			padding: 15px;
+			display: flex;
+    		flex-wrap: wrap;
+
+			.app-form-body-left, .app-form-body-right {
+				width: 50%;
+			}
+
+			@media (max-width:700px) {
+				.app-form-body-left, .app-form-body-right {
+					width: 100%;
+				}
+			}
+		}
+
+		.app-form-footer {
+			bottom: 0;
+			left: 0;
+			margin: 10px;
+		}
+	}
+}

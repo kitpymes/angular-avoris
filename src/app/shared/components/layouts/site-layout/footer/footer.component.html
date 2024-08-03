@@ -1,0 +1,9 @@
+<div id="SITE-LAYOUT-FOOTER">
+   <mat-toolbar color="primary">
+      <span class="spacer"></span>
+      <span class="text" *ngIf="!isProduction">
+         {{environmentName}} | {{angularVersion}} | {{appName}} {{ today | date: 'yyyy' }}
+      </span>
+      <span class="spacer"></span>
+   </mat-toolbar>
+</div>

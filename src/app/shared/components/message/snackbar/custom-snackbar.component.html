@@ -1,0 +1,4 @@
+@if(data.html)
+{
+	<div mat-dialog-title [innerHTML]="data.html | sanitizer: securityContextType.HTML"></div>
+}
