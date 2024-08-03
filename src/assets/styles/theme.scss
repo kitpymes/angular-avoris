@@ -10,9 +10,6 @@ $deeppurple-amber-theme: mat.m2-define-light-theme((
 	density: 0,
 ));
 
-
-//mat.$theme-ignore-duplication-warnings: true;
-
 @include mat.core();
 
 :root {

@@ -1,7 +1,6 @@
-import { AbstractControl, UntypedFormGroup, ValidationErrors, ValidatorFn, Validators } from "@angular/forms";
+import { AbstractControl, ValidationErrors, ValidatorFn, Validators } from "@angular/forms";
 
 import { AppValidator } from './validator';
-import { environment } from "@env/environment";
 
 export class AppFormValidator {
 	static readonly requiredValidator = (control: AbstractControl): ValidationErrors | null => {

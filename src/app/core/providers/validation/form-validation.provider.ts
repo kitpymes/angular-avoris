@@ -1,4 +1,4 @@
-import { Injectable, inject } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { AbstractControl, ValidationErrors, UntypedFormGroup, UntypedFormArray, UntypedFormControl } from '@angular/forms';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
 
@@ -62,9 +62,7 @@ export class FormValidationProvider {
 	 *  By setting error we emit a status changed event for the form.
 	 */
 	public invalidFormHasSubmit = (): void => {
-		// fixme: changed the listener to value changes so setErrors() wouldn't trigger it
-		// fixme: look up for another method to trigger value changes
-		this.form?.markAllAsTouched();
+			this.form?.markAllAsTouched();
 		this.form?.setErrors({});
 	};
 
@@ -158,7 +156,6 @@ export class FormValidationProvider {
 	private setErrorMessage(errors: ValidationErrors) {
 		const validatorName = Object.keys(errors)[1] ?? Object.keys(errors)[0];
 		const validatorValue = errors[validatorName];
-		const langKey = AppValidator.getLangKey(validatorName);
 		const translate = validatorValue;
 		this.message = translate;
 	}
@@ -173,7 +170,6 @@ export class FormValidationProvider {
 
 		Object.keys(errors).forEach(validatorName => {
 			const validatorValue = errors[validatorName];
-			const langKey = AppValidator.getLangKey(validatorName);
 			const translate = validatorValue;
 			this.message = this.message ? this.message.concat(' ' + translate) : translate;
 		});

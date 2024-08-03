@@ -1,5 +1,5 @@
 import { APP_INITIALIZER, EnvironmentProviders, makeEnvironmentProviders } from '@angular/core';
-import { Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError, provideRouter, withInMemoryScrolling, withEnabledBlockingInitialNavigation, withViewTransitions, withHashLocation, withComponentInputBinding, withRouterConfig, withPreloading } from '@angular/router';
+import { Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError, provideRouter, withInMemoryScrolling, withEnabledBlockingInitialNavigation, withViewTransitions, withHashLocation, withComponentInputBinding, withRouterConfig } from '@angular/router';
 import { MatProgressSpinner } from '@angular/material/progress-spinner';
 
 import { LoadingProvider, LoadingRef } from '@shared/components/loading';

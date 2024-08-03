@@ -1,6 +1,6 @@
 ﻿import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 import { ApiResult } from '@core/models';
 import { HttpProvider } from '@core/providers/http';
