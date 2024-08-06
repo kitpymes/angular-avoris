@@ -7,6 +7,10 @@
 ## Ver en vivo
 Se puede ver el resultado en: [Stackblitz](https://stackblitz.com/~/github.com/kitpymes/angular-avoris)
 
+<p align="center">
+  <img src="src/assets/result.jpg" alt="Ávoristech" /><br />
+</p>
+
 
 ## Nota importante 🚨
 
