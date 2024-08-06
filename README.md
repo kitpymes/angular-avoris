@@ -4,6 +4,10 @@
 
 # Prueba Técnica Angular 
 
+## Ver en vivo
+Se puede ver el resultado en: [Stackblitz](https://stackblitz.com/~/github.com/kitpymes/angular-avoris)
+
+
 ## Nota importante 🚨
 
 Este proyecto es parte de una prueba técnica propiedad de **Ávoris Corporación Empresarial**. Por favor, no compartas ni publiques este código de manera pública. Su distribución o divulgación sin autorización está estrictamente prohibida.
